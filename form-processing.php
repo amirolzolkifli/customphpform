@@ -19,6 +19,26 @@ require 'sb-includes/vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
 // Process submitted form post
 if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 {
+	// Get recaptcha class
+	require_once 'sb-includes/recaptcha/autoload.php';
+
+	// Set recaptcha
+	$recaptcha_secret = '6LfWLiMTAAAAAI3wD4dEmJ2jvOjBFOpNtwGHHio5';
+	$reCaptcha = new \ReCaptcha\ReCaptcha($recaptcha_secret, new \ReCaptcha\RequestMethod\SocketPost());
+
+	// Validate recaptcha
+	$response = $reCaptcha->verify(		
+	        $_POST['g-recaptcha-response'],
+	        $_SERVER['REMOTE_ADDR']
+	    );
+
+  	if ( ! $response->isSuccess() )
+  	{
+  		$errors = 'Captcha is not valid or empty.';
+		include('form-errors.php');
+		exit();
+  	}
+
 	// Form Validation
 	$gump = new GUMP();
 
