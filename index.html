@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="Custom PHP Form.">
+<meta name="author" content="Amirol Zolkifli">
+<title>Custom PHP Form</title>
+
+<!-- Bootstrap -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.0/animate.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<style type="text/css">
+body {
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+
+<div class="row">
+<div class="col-md-6 col-md-offset-3">
+
+<div class="panel panel-default">
+	<div class="panel-body">
+	
+
+<!-- Form Start -->
+<!-- Form styling is using Bootstrap Framework -->
+
+<form id="validate-form" class="form-horizontal"  method="post" enctype="multipart/form-data" action="form-processing.php">
+
+
+	<h3 class="page-header">Contact Info</h3>
+
+	<div class="form-group">
+		<label for="name" class="col-sm-2 control-label">Name</label>
+		<div class="col-sm-10">
+			<input id="name" name="name" type="text" class="form-control" placeholder="e.g: Ali Baba" required>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="email" class="col-sm-2 control-label">Email</label>
+		<div class="col-sm-10">
+			<input id="email" name="email" type="email" class="form-control" placeholder="e.g: your@email.com" required>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="phone" class="col-sm-2 control-label">Phone</label>
+		<div class="col-sm-10">
+			<input id="phone" name="phone" type="text" class="form-control" placeholder="e.g: 012-3456789" required>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="address" class="col-sm-2 control-label">Address</label>
+		<div class="col-sm-10">
+			<textarea id="address" name="address" class="form-control" placeholder="e.g: No. 123 Apartment A..." required></textarea>
+		</div>
+	</div>
+
+	<h3 class="page-header">Attachments</h3>
+
+	<div class="form-group">
+		<label for="attachment0" class="col-sm-2 control-label">IC</label>
+		<div class="col-sm-10">
+			<input id="attachment0" name="attachments[0]" type="file" class="form-control" required>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="attachment1" class="col-sm-2 control-label">Driving License</label>
+		<div class="col-sm-10">
+			<input id="attachment1" name="attachments[1]" type="file" class="form-control" required>
+		</div>
+	</div>
+
+	<hr>
+
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<button type="reset" class="btn btn-default"><i class="fa fa-refresh"></i> Reset Form</button>
+			<button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> Submit Form</button>
+		</div>
+	</div>
+</form>
+
+<!-- /Form End -->
+
+
+	</div><!-- /.panel-body-->
+</div><!-- /.panel-->
+
+
+</div><!--/.col-md-x-->
+</div><!--/.row-->
+
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.min.js"></script>
+<script>
+$("#validate-form").validate(
+
+{
+  rules: {
+    'attachments[0]': {
+      required: true,
+      accept: "image/*,application/pdf"
+    },
+    'attachments[1]': {
+      required: true,
+      accept: "image/*,application/pdf"
+    }
+  }
+}
+
+
+	);
+</script>
+</body>
+</html>

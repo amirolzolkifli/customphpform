@@ -1,0 +1,124 @@
+[
+    {
+        "name": "phpmailer/phpmailer",
+        "version": "v5.2.16",
+        "version_normalized": "5.2.16.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/PHPMailer/PHPMailer.git",
+            "reference": "1d85f9ef3ecfc42bbc4f3c70d5e37ca9a65f629a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/1d85f9ef3ecfc42bbc4f3c70d5e37ca9a65f629a",
+            "reference": "1d85f9ef3ecfc42bbc4f3c70d5e37ca9a65f629a",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.0.0"
+        },
+        "require-dev": {
+            "phpdocumentor/phpdocumentor": "*",
+            "phpunit/phpunit": "4.7.*"
+        },
+        "suggest": {
+            "league/oauth2-google": "Needed for Google XOAUTH2 authentication"
+        },
+        "time": "2016-06-06 09:09:37",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "class.phpmailer.php",
+                "class.phpmaileroauth.php",
+                "class.phpmaileroauthgoogle.php",
+                "class.smtp.php",
+                "class.pop3.php",
+                "extras/EasyPeasyICS.php",
+                "extras/ntlm_sasl_client.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-2.1"
+        ],
+        "authors": [
+            {
+                "name": "Jim Jagielski",
+                "email": "jimjag@gmail.com"
+            },
+            {
+                "name": "Marcus Bointon",
+                "email": "phpmailer@synchromedia.co.uk"
+            },
+            {
+                "name": "Andy Prevost",
+                "email": "codeworxtech@users.sourceforge.net"
+            },
+            {
+                "name": "Brent R. Matzelle"
+            }
+        ],
+        "description": "PHPMailer is a full-featured email creation and transfer class for PHP"
+    },
+    {
+        "name": "wixel/gump",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Wixel/GUMP.git",
+            "reference": "34792ec8ff9a8caf3f1a859203baed74c509dc46"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Wixel/GUMP/zipball/34792ec8ff9a8caf3f1a859203baed74c509dc46",
+            "reference": "34792ec8ff9a8caf3f1a859203baed74c509dc46",
+            "shasum": ""
+        },
+        "time": "2016-06-04 09:22:30",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "files": [
+                "gump.class.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Colleen Emryss",
+                "homepage": "http://skitter.tv"
+            },
+            {
+                "name": "Mark Slingsby",
+                "homepage": "http://www.rsaweb.co.za"
+            },
+            {
+                "name": "Roy de Kleijn",
+                "homepage": "http://roydekleijn.com"
+            },
+            {
+                "name": "Christian Klisch",
+                "homepage": "http://www.christian-klisch.de/"
+            },
+            {
+                "name": "Inge Brattaas",
+                "homepage": "http://res.no/"
+            },
+            {
+                "name": "Rob Crowe",
+                "homepage": "http://vivalacrowe.com"
+            },
+            {
+                "name": "Sean Nieuwoudt",
+                "homepage": "https://wixelhq.com"
+            }
+        ],
+        "description": "A fast, extensible & stand-alone PHP input validation class that allows you to validate any data",
+        "homepage": "https://wixelhq.com/"
+    }
+]
