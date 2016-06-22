@@ -23,7 +23,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 	require_once 'sb-includes/recaptcha/autoload.php';
 
 	// Set recaptcha
-	$recaptcha_secret = '6LfWLiMTAAAAAI3wD4dEmJ2jvOjBFOpNtwGHHio5';
+	$recaptcha_secret = RECAPTCHA_SECRET_KEY;
 	$reCaptcha = new \ReCaptcha\ReCaptcha($recaptcha_secret, new \ReCaptcha\RequestMethod\SocketPost());
 
 	// Validate recaptcha

@@ -21,3 +21,4 @@ define('EMAIL_REPLY_TO', 'replyto@domain.com');
 define('SENDER_NAME', 'Sender Name');
 define('EMAIL_SUBJECT', 'Email Subject');
 define('THANK_YOU_PAGE', 'http://www.amirolzolkifli.com');
+define('RECAPTCHA_SECRET_KEY', '6LfWLiMTAAAAAI3wD4dEmJ2jvOjBFOpNtwGHHio5');
